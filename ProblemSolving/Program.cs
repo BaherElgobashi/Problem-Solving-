@@ -4,9 +4,13 @@
     {
         static void Main(string[] args)
         {
-            long num = long.Parse(Console.ReadLine());
+            string[] parts = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
-            Console.WriteLine($"{(num*2-1)} {num*2}");
+            long t = long.Parse(parts[0]);
+            long s = long.Parse(parts[1]);
+            //long m = long.Parse(parts[2]);
+
+            Console.WriteLine(t - (s*1000));
 
 
 
