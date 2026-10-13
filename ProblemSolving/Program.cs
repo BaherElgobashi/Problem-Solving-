@@ -6,12 +6,15 @@
         {
             string[] parts = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
-            long m = long.Parse(parts[0]);
-            long a = long.Parse(parts[1]);
-            long b= long.Parse(parts[2]);
-            long c = long.Parse(parts[3]);
+            double x = double.Parse(parts[0]);
+            double a = double.Parse(parts[1]);
+            double b = double.Parse(parts[2]);
 
-            Console.WriteLine((m*4) - (a+b+c));
+            double number = (x*a +b);
+
+            Console.WriteLine($"{number:F8}");
+
+            
 
 
         }
