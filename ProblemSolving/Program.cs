@@ -5,23 +5,16 @@
         static void Main(string[] args)
         {
             string[] parts = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
-            long n = long.Parse(parts[0]);
-
-             if(n == 0)
-            {
-                Console.WriteLine(1);
-            }
-             else if( n == 1)
-            {
-                Console.WriteLine(5);
-            }
-            else
-            {
-                Console.WriteLine(25);
-            }
 
 
+            long a = long.Parse(parts[0]);
+            long b = long.Parse(parts[1]);
+            long c = long.Parse(parts[2]);
+            long d = long.Parse(parts[3]);
+            Console.WriteLine(a+b+c+d);
+            
 
+ 
 
 
 
