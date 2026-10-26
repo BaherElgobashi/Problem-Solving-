@@ -6,14 +6,11 @@
         {
             string[] parts = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
-            long n = long.Parse(parts[0]);
-            long r = long.Parse(parts[1]);
-            if(n >= r)
-            {
-                Console.WriteLine(n-r);
-            }
+            long h = long.Parse(parts[0]);
+            if(h == 23 || h == 22 || h == 0 || h ==1 || h == 2 || h == 3 || h == 4 || h == 5 || h==6)
+                Console.WriteLine("QUIET\r\n");
             else
-                Console.WriteLine(-1);
+                Console.WriteLine("OPEN\r\n");
            
             
             
