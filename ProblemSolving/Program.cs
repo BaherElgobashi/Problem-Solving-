@@ -7,13 +7,13 @@
             string[] parts = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
             long n = long.Parse(parts[0]);
-            long k = long.Parse(parts[1]);
-            if(n >= k)
+            long r = long.Parse(parts[1]);
+            if(n >= r)
             {
-                Console.WriteLine("YES");
+                Console.WriteLine(n-r);
             }
             else
-                Console.WriteLine("NO");
+                Console.WriteLine(-1);
            
             
             
