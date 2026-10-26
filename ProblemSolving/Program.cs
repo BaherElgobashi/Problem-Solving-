@@ -6,11 +6,14 @@
         {
             string[] parts = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
-            long a = long.Parse(parts[0]);
-            long b = long.Parse(parts[1]);
-
-            
-            Console.WriteLine($"{b} {a}");
+            long n = long.Parse(parts[0]);
+            long k = long.Parse(parts[1]);
+            if(n >= k)
+            {
+                Console.WriteLine("YES");
+            }
+            else
+                Console.WriteLine("NO");
            
             
             
