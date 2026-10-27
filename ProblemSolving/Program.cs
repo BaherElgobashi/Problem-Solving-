@@ -6,16 +6,14 @@
         {
             string[] parts = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
-            long a = long.Parse(parts[0]);
-            long b = long.Parse(parts[1]);
-            long x = long.Parse(parts[2]);
+            long w = long.Parse(parts[0]);
+            long h = long.Parse(parts[1]);
+            long a = long.Parse(parts[2]);
+            long b = long.Parse(parts[3]);
 
-            
+            if((w <= b && h <= a) || (w <=a && h <=b)) Console.WriteLine("YES\r\n");
+            else Console.WriteLine("NO\r\n");
 
-             if( x >= a && x <= b) Console.WriteLine("ON_TIME\r\n");
-
-            else if (x < a) Console.WriteLine("EARLY\r\n");
-            else if (x > b) Console.WriteLine("LATE\r\n");
             
 
 
