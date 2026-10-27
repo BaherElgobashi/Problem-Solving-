@@ -1,42 +1,24 @@
-﻿namespace ProblemSolving
+﻿using System.Threading.Channels;
+
+namespace ProblemSolving
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            string[] parts = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
+            //string[] parts = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
-            long x = long.Parse(parts[0]);
-            long y = long.Parse(parts[1]);
+            string s = Console.ReadLine();
 
-            if( x == 0 || y == 0) Console.WriteLine(0);
+            long a = (long)s[0];
+            long b = (long)s[1];
+            long c = (long)s[2];
 
-            else if (x > 0 && y > 0) Console.WriteLine(1);
+           
 
-            else if (x < 0 && y > 0) Console.WriteLine(2);
-
-            else if (x < 0 && y < 0) Console.WriteLine(3);
-
-            else if (x > 0 && y < 0) Console.WriteLine(4);
-            
-
-            
-
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            if(b > a && b < c) Console.WriteLine("YES");
+            else if(b < a && b > c) Console.WriteLine("YES");
+            else Console.WriteLine("NO");
 
         }
     }
