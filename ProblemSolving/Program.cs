@@ -6,13 +6,21 @@
         {
             string[] parts = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
-            long w = long.Parse(parts[0]);
-            long h = long.Parse(parts[1]);
-            long a = long.Parse(parts[2]);
-            long b = long.Parse(parts[3]);
+            long x = long.Parse(parts[0]);
+            long y = long.Parse(parts[1]);
 
-            if((w <= b && h <= a) || (w <=a && h <=b)) Console.WriteLine("YES\r\n");
-            else Console.WriteLine("NO\r\n");
+            if( x == 0 || y == 0) Console.WriteLine(0);
+
+            else if (x > 0 && y > 0) Console.WriteLine(1);
+
+            else if (x < 0 && y > 0) Console.WriteLine(2);
+
+            else if (x < 0 && y < 0) Console.WriteLine(3);
+
+            else if (x > 0 && y < 0) Console.WriteLine(4);
+            
+
+            
 
             
 
