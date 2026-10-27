@@ -6,18 +6,17 @@
         {
             string[] parts = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
-            long x = long.Parse(parts[0]);
-            long a = long.Parse(parts[1]);
-            long b = long.Parse(parts[2]);
+            long a = long.Parse(parts[0]);
+            long b = long.Parse(parts[1]);
+            long x = long.Parse(parts[2]);
 
-            long DiffA = Math.Abs(x - a);
-            long DiffB = Math.Abs(x - b);
+            
 
-            if (DiffA < DiffB)
-                Console.WriteLine("A");
-            else if(DiffA > DiffB)
-                Console.WriteLine("B");
-            else Console.WriteLine("TIE\r\n");
+             if( x >= a && x <= b) Console.WriteLine("ON_TIME\r\n");
+
+            else if (x < a) Console.WriteLine("EARLY\r\n");
+            else if (x > b) Console.WriteLine("LATE\r\n");
+            
 
 
 
