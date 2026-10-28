@@ -6,19 +6,42 @@ namespace ProblemSolving
     {
         static void Main(string[] args)
         {
-            //string[] parts = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
+           string[] parts = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
-            string s = Console.ReadLine();
 
-            long a = (long)s[0];
-            long b = (long)s[1];
-            long c = (long)s[2];
 
+            long a = long.Parse(parts[0]);
+            long b = long.Parse(parts[1]);
+            long k = long.Parse(parts[2]);
+            long d = long.Parse(parts[3]);
+
+            if( a >= k)
+            {
+                long ResultA = a - d;
+                if(ResultA < 0)
+                {
+                    Console.WriteLine("TIE");
+                    return;
+                }
+                    
+                Console.WriteLine("FIRST\r\n");
+            }
+            else if (b >= k)
+            {
+                long ResultB = b - d;
+                if (ResultB < 0)
+                {
+                    Console.WriteLine("TIE");
+                    return;
+                }
+                    
+                Console.WriteLine("SECOND\r\n");
+            }
            
 
-            if(b > a && b < c) Console.WriteLine("YES");
-            else if(b < a && b > c) Console.WriteLine("YES");
-            else Console.WriteLine("NO");
+            
+
+          
 
         }
     }
