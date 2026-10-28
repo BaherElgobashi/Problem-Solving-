@@ -15,33 +15,31 @@ namespace ProblemSolving
             long k = long.Parse(parts[2]);
             long d = long.Parse(parts[3]);
 
-            if( a >= k)
-            {
-                long ResultA = a - d;
-                if(ResultA < 0)
-                {
-                    Console.WriteLine("TIE");
-                    return;
-                }
-                    
-                Console.WriteLine("FIRST\r\n");
-            }
-            else if (b >= k)
-            {
-                long ResultB = b - d;
-                if (ResultB < 0)
-                {
-                    Console.WriteLine("TIE");
-                    return;
-                }
-                    
-                Console.WriteLine("SECOND\r\n");
-            }
-           
+            long x = a;
 
-            
+            if(x >= k)
+            {
+                x = Math.Max(0 , x-d);
+            }
 
-          
+            long y = b;
+
+            if (y >= k)
+            {
+                y = Math.Max(0, y - d);
+            }
+
+            if(x < y)
+                Console.WriteLine("FIRST");
+
+            else if(x > y)
+                Console.WriteLine("SECOND");
+            else
+                Console.WriteLine("TIE");
+
+
+
+
 
         }
     }
