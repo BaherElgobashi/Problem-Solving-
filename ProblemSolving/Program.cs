@@ -9,33 +9,33 @@ namespace ProblemSolving
            string[] parts = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
 
+           long p = long.Parse(parts[0]); 
+           long d = long.Parse(parts[1]); 
+           long k = long.Parse(parts[2]); 
 
-            long a = long.Parse(parts[0]);
-            long b = long.Parse(parts[1]);
-            long k = long.Parse(parts[2]);
-            long d = long.Parse(parts[3]);
+           long ans = p;
 
-            long x = a;
+           long option1 = Math.Max(0 , p-d);
 
-            if(x >= k)
+            ans = Math.Min(ans , option1);
+
+            if( p >= k)
             {
-                x = Math.Max(0 , x-d);
+                long option2 = p / 2;
+                ans = Math.Min(ans , option2);
             }
+           
+           System.Console.WriteLine(ans);
 
-            long y = b;
+           
+           
 
-            if (y >= k)
-            {
-                y = Math.Max(0, y - d);
-            }
+           
+            
 
-            if(x < y)
-                Console.WriteLine("FIRST");
+            
 
-            else if(x > y)
-                Console.WriteLine("SECOND");
-            else
-                Console.WriteLine("TIE");
+            
 
 
 
